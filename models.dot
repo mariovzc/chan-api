@@ -1,0 +1,8 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"Board" [shape=Mrecord, label="{Board|id :INTEGER\lname :varchar\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Comment" [shape=Mrecord, label="{Comment|id :INTEGER\lbody :text\luser_ip :varchar\lpost_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Post" [shape=Mrecord, label="{Post|id :INTEGER\ltitle :varchar\luser_ip :varchar\lboard_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Board" -> "Post" [arrowtail=odot, arrowhead=crow, dir=both color="#8CA149"]
+	"Post" -> "Comment" [arrowtail=odot, arrowhead=crow, dir=both color="#43C747"]
+}
