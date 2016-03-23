@@ -1,4 +1,4 @@
 class Post < ActiveRecord::Base
   belongs_to :board
-  has_many :post
+  has_many :comments
 end
