@@ -1,3 +1,6 @@
 class Board < ActiveRecord::Base
-  has_many :posts
+  has_many :posts, dependent: :destroy
+
+  #Validation
+  validates :name, presence: true
 end
