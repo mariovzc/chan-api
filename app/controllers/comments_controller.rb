@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     if comment.save
       render json: comment, status: 200
     else
-      render json: "error".to_json, status: 403
+      render json: comment.errors, status: 403
     end
 
   end
