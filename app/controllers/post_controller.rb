@@ -10,7 +10,7 @@ class PostController < ApplicationController
     if post.save
       render json: post, status: 200
     else
-      render json: "error".to_json, status: 200
+      render json: "error".to_json, status: 403
     end
   end
 
