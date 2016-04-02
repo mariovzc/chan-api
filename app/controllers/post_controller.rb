@@ -19,6 +19,6 @@ class PostController < ApplicationController
     @board = Board.where(name: params[:name])[0]
   end
   def create_params
-    params.require(:post).permit(:title, :user_ip)
+    params.require(:post).permit(:title, :user_ip, :body)
   end
 end
