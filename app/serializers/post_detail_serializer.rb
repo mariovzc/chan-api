@@ -1,6 +1,9 @@
 class PostDetailSerializer < ActiveModel::Serializer
   attributes :id, :title, :body, :comment
   def comment
-    object.comments
+    arr = []
+    hash = {}
+    object.comments.each do |comment|
+    end
   end
 end
