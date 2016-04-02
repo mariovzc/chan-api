@@ -4,7 +4,7 @@ class PostSerializer < ActiveModel::Serializer
     object.created_at.to_formatted_s(:db)
   end
   def posts
-    p = Post.where(board_id: object.id)
+    p = Comment.where(post_id: object.id)
     p.count
   end
 end
