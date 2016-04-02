@@ -3,4 +3,6 @@ class Board < ActiveRecord::Base
 
   #Validation
   validates :name, presence: true
+  validates :description, presence: true
+
 end

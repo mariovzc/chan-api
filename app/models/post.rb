@@ -3,6 +3,6 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
 
   #Validations
-  validates :title, presence: true
+  validates :title, :body, presence: true
   validates :user_ip, presence: true
 end
